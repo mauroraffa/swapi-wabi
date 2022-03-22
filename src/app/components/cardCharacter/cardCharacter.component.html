@@ -1,0 +1,14 @@
+<div (click)="test()" class="cardCharacter">
+  <div class="name">
+    <p style="font-size: 42px">{{ character.name }}</p>
+  </div>
+
+  <div class="d-flex flex-row description">
+    <div class="p-2 image-profile">
+      <img [src]="character.imagePath" alt="image" style="width: 120px" />
+    </div>
+
+    <div class="p-2 description-profile"></div>
+  </div>
+</div>
+ 

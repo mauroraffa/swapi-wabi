@@ -1,0 +1,26 @@
+<div class="card" (click)="test()" *ngIf="!loading">
+  <img
+    [src]="character.imagePath"
+    alt="image"
+    style="width: 120px; margin: 8px"
+  />
+  <p
+    style="
+      color: #ad7d37;
+      margin: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    "
+  >
+    {{ character.name }}
+  </p>
+</div>
+ 
+
+<div class="card" *ngIf="loading">
+  <div style="width: 120px !important; height: 200px; margin: 8px">
+    <div class="loading-animation"></div>
+  </div>
+</div>
+ 

@@ -1,0 +1,26 @@
+.featured-container {
+  .featured-companies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 344px;
+    row-gap: 16px;
+  }
+}
+
+.card {
+  box-shadow: 0 2px 2px 0 rgb(255 255 255 / 16%),
+    0 0 0 1px rgb(255 255 255 / 8%);
+  margin: 8px;
+}
+
+@media (min-width: 768px) {
+  .featured-container {
+    .featured-companies {
+      justify-content: space-between;
+      max-width: inherit;
+    }
+  }
+}

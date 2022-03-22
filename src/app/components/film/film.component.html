@@ -1,0 +1,12 @@
+<div class="card" *ngIf="!loading">
+  <img [src]="film.imagePath"  alt='image' style="width: 120px;    margin: 8px;">
+  <p style="color: #ad7d37;margin: 8px;    height: 40px; display: flex;
+  align-items: center;">{{film.title}}</p>
+</div> 
+
+
+<div class="card" *ngIf="loading">
+  <div style="width: 120px !important; height: 200px;  margin: 8px;">
+    <div class="loading-animation"></div>
+  </div>
+</div> 
