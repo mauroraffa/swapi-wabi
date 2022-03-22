@@ -1,3 +1,7 @@
+.description {
+  flex-direction: row !important;
+}
+
 .featured-container {
   .featured-companies {
     display: flex;
@@ -13,8 +17,20 @@
 .cardCharacter {
   box-shadow: 0 2px 2px 0 rgb(255 255 255 / 16%),
     0 0 0 1px rgb(255 255 255 / 8%);
-  margin: 8px;
   background-color: white;
+  max-width: 512px;
+  margin: auto;
+
+  .description-profile {
+    margin-left: 12px;
+    .title {
+      align-self: center;
+    }
+    .result {
+      align-self: center;
+      text-transform: capitalize;
+    }
+  }
 }
 
 .name {
@@ -22,6 +38,8 @@
   margin: auto;
   p {
     margin-left: 10px;
+    font-size: 42px;
+    margin-bottom: 2px;
   }
 }
 @media (min-width: 768px) {
@@ -29,6 +47,17 @@
     .featured-companies {
       justify-content: space-between;
       max-width: inherit;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .description {
+    flex-direction: column !important;
+  }
+  .name {
+    p {
+      text-align: center;
     }
   }
 }

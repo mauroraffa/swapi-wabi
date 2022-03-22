@@ -1,24 +1,26 @@
 <div>
-  <div>
+  <div class="characterProfile">
     <wb-cardCharacter [character]="character"> </wb-cardCharacter>
   </div>
 
-  <div>
-    <h1 style="color: #ad7d37">Episodes</h1>
-  </div>
+  <div class="episodes">
+    <div style="max-width: 950px; margin: auto">
+      <h1 style="color: #ad7d37">Episodes</h1>
+    </div>
 
-  <div class="featured-container">
-    <div class="featured-companies">
-      <div class="featured" *ngFor="let film of films">
-        <wb-film [film]="film"></wb-film>
+    <div class="featured-container">
+      <div class="featured-companies">
+        <div class="featured" *ngFor="let film of films">
+          <wb-film [film]="film"></wb-film>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="featured-container" *ngIf="loadingPage">
-    <div class="featured-companies">
-      <div class="featured" *ngFor="let item of [0, 1, 2]">
-        <wb-card [loading]="true"></wb-card>
+    <div class="featured-container" *ngIf="loadingPage">
+      <div class="featured-companies">
+        <div class="featured" *ngFor="let item of [0, 1, 2]">
+          <wb-card [loading]="true"></wb-card>
+        </div>
       </div>
     </div>
   </div>

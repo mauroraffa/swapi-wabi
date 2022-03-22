@@ -1,9 +1,9 @@
 <div>
-  <div class="search">
+  <div class="search" *ngIf="firstTimePage">
     <yoda></yoda>
   </div>
 
-  <div>
+  <div class="probando" *ngIf="!firstTimePage">
     <div class="search">
       <div class="input-group">
         <input

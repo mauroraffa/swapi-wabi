@@ -1,14 +1,66 @@
 <div (click)="test()" class="cardCharacter">
   <div class="name">
-    <p style="font-size: 42px">{{ character.name }}</p>
+    <p>{{ character.name }}</p>
   </div>
 
-  <div class="d-flex flex-row description">
-    <div class="p-2 image-profile">
-      <img [src]="character.imagePath" alt="image" style="width: 120px" />
+  <div class="d-flex description">
+    <div class="p-2 image-profile" style="align-self: center; width: 220px">
+      <img [src]="character.imagePath" alt="image" style="width: 210px" />
     </div>
 
-    <div class="p-2 description-profile"></div>
+    <div class="p-2 description-profile">
+      <div class="d-flex flex-column">
+        <div class="d-flex flex-row">
+          <div class="p-2 title">
+            <img src="/assets/icon-2.png" alt="image" style="width: 32px" />
+          </div>
+          <div class="p-2 title">Height:</div>
+          <div class="p-2 result">{{ character.height }}</div>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="p-2 title">
+            <img src="/assets/icon-3.png" alt="image" style="width: 32px" />
+          </div>
+          <div class="p-2 title">Mass:</div>
+          <div class="p-2 result">{{ character.mass }}</div>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="p-2 title">
+            <img src="/assets/icon-4.png" alt="image" style="width: 32px" />
+          </div>
+          <div class="p-2 title">Hair Color:</div>
+          <div class="p-2 result">{{ character.hair_color }}</div>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="p-2 title">
+            <img src="/assets/icon-5.png" alt="image" style="width: 32px" />
+          </div>
+          <div class="p-2 title">Skin Color:</div>
+          <div class="p-2 result">{{ character.skin_color }}</div>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="p-2 title">
+            <img src="/assets/icon-6.png" alt="image" style="width: 32px" />
+          </div>
+          <div class="p-2 title">Eye Color:</div>
+          <div class="p-2 result">{{ character.eye_color }}</div>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="p-2 title">
+            <img src="/assets/icon-7.png" alt="image" style="width: 32px" />
+          </div>
+          <div class="p-2 title">Birh Year:</div>
+          <div class="p-2 result">{{ character.birth_year }}</div>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="p-2 title">
+            <img src="/assets/icon-8.png" alt="image" style="width: 32px" />
+          </div>
+          <div class="p-2 title">Gender:</div>
+          <div class="p-2 result">{{ character.gender }}</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
  

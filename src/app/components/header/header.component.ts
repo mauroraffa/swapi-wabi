@@ -7,6 +7,8 @@ import {
   HostListener,
   ɵConsole,
 } from '@angular/core';
+import { Location } from '@angular/common';
+import { NavigatorService } from 'src/app/core/shared/services/navigation/navigator.service';
 
 @Component({
   selector: 'wb-header',
@@ -18,10 +20,18 @@ export class HeaderComponent implements OnInit {
   onPopState() {
     // this.onBackClick();
   }
+  isMobile: boolean = true;
 
-  constructor() {}
+  constructor(
+    private _location: Location,
+    private navigatorService: NavigatorService
+  ) {
+    this.isMobile = this.navigatorService.isMobile;
+  }
 
   ngOnInit() {}
 
-  onBackClick() {}
+  onBackClick() {
+    this._location.back();
+  }
 }
