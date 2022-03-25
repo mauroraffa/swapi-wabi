@@ -2,26 +2,34 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
 
-## Development server
+## Get started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Clone the repo
 
-## Code scaffolding
+```shell
+git clone https://github.com/mauroraffa/swapi-wabi
+cd swapi_exp
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Install npm packages
 
-## Build
+Install the `npm` packages described in the `package.json` and verify that it works:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```shell
+npm install
+```
 
-## Running unit tests
+### Run the app
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```shell
+ng serve
+```
 
-## Running end-to-end tests
+Builds and serves your app, rebuilding on file changes.
+The `ng serve` command builds and serves your app in `http://localhost:4200/`, rebuilding on file changes.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Shut it down manually with `Ctrl-C`.
 
-## Further help
+## Author
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **Mauro Raffa**
