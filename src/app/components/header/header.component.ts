@@ -1,12 +1,4 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  Output,
-  EventEmitter,
-  HostListener,
-  ɵConsole,
-} from '@angular/core';
+import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { NavigatorService } from 'src/app/core/shared/services/navigation/navigator.service';
 
@@ -15,11 +7,7 @@ import { NavigatorService } from 'src/app/core/shared/services/navigation/naviga
   styleUrls: ['./header.component.scss'],
   templateUrl: './header.component.html',
 })
-export class HeaderComponent implements OnInit {
-  @HostListener('window:popstate', ['$event'])
-  onPopState() {
-    // this.onBackClick();
-  }
+export class HeaderComponent {
   isMobile: boolean = true;
 
   constructor(
@@ -28,8 +16,6 @@ export class HeaderComponent implements OnInit {
   ) {
     this.isMobile = this.navigatorService.isMobile;
   }
-
-  ngOnInit() {}
 
   onBackClick() {
     this._location.back();

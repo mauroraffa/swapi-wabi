@@ -1,22 +1,9 @@
-<div class="header-container" id="header-component">
-  <div
-    class="back-cta-container icon"
-    (click)="onBackClick()"
-    style="width: 50px; display: flex"
-  >
-    <img
-      src="/assets/back.png"
-      alt="image"
-      style="width: 32px"
-      *ngIf="isMobile"
-    />
+<div class="header-container">
+  <div class="item-container" (click)="onBackClick()">
+    <img src="/assets/back.png" alt="image" class="image" *ngIf="isMobile" />
   </div>
-  <div class="d-flex justify-content-center" style="width: 100%">
-    <img src="/assets/logo.png" alt="image" style="width: 60px" />
+  <div class="d-flex justify-content-center logo-container">
+    <img src="/assets/logo.png" alt="image" class="image" />
   </div>
-  <div
-    class="back-cta-container icon"
-    (click)="onBackClick()"
-    style="width: 50px; display: flex"
-  ></div>
+  <div class="item-container" (click)="onBackClick()"></div>
 </div>

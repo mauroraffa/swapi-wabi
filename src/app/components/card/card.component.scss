@@ -2,6 +2,24 @@
   box-shadow: 0 2px 2px 0 rgb(255 255 255 / 16%),
     0 0 0 1px rgb(255 255 255 / 8%);
   margin: 8px;
+
+  .image {
+    width: 126px;
+    margin: 8px;
+  }
+
+  .name {
+    color: #ad7d37;
+    margin: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .loading {
+    width: 126px !important;
+    height: 200px;
+    margin: 8px;
+  }
 }
 
 .loading-animation:empty {

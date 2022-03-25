@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SearchComponent } from './search.component';
+import { CardListComponent } from './card-list.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: SearchComponent,
+    component: CardListComponent,
   },
   {
     path: 'character/:id',
-    loadChildren: () => import('./../character/character.module').then(m => m.CharacterModule),
+    loadChildren: () =>
+      import('../character/character.module').then((m) => m.CharacterModule),
   },
 ];
 
@@ -17,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class SearchPageRoutingModule { }
+export class CardListRoutingModule {}

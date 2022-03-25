@@ -1,11 +1,16 @@
 <div>
+  <div class="headboard">
+    <wb-headboard [title]="'Character'" [subtitle]="'Character details'">
+    </wb-headboard>
+  </div>
+
   <div class="characterProfile">
     <wb-cardCharacter [character]="character"> </wb-cardCharacter>
   </div>
 
   <div class="episodes">
-    <div style="max-width: 950px; margin: auto">
-      <h1 style="color: #ad7d37">Episodes</h1>
+    <div class="title">
+      <h1>Episodes</h1>
     </div>
 
     <div class="featured-container">

@@ -1,5 +1,5 @@
 const API_DOMAIN = 'https://swapi.dev/api';
-const ASSETS_DOMAIN = 'https://starwars-visualguide.com/assets/img/characters/22.jpg';
+const ASSETS_DOMAIN = 'https://starwars-visualguide.com/assets/img';
 
 export const environment = {
   production: false,
@@ -8,6 +8,7 @@ export const environment = {
   planets: `${API_DOMAIN}/planets/`,
   species: `${API_DOMAIN}/species/`,
   starships: `${API_DOMAIN}/starships/`,
-  vehicles: `${API_DOMAIN}/vehicles/` 
+  vehicles: `${API_DOMAIN}/vehicles/`,
+  assetCharacter: `${ASSETS_DOMAIN}/characters/`,
+  assetFilms: `${ASSETS_DOMAIN}/films/`,
 };
-

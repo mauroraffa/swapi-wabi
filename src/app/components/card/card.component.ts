@@ -1,30 +1,17 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { People } from 'src/app/core/shared/interfaces/people.interface';
-import { CacheService } from 'src/app/core/shared/services/cache/cache.service';
 
 @Component({
   selector: 'wb-card',
   styleUrls: ['./card.component.scss'],
   templateUrl: './card.component.html',
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
   @Input() character!: People;
   @Input() loading!: boolean;
+  @Output() clickCard: EventEmitter<People> = new EventEmitter<People>();
 
-  constructor(private router: Router, private cacheService: CacheService) {}
-
-  ngOnInit() {}
-
-  test() {
-    this.navigate();
-  }
-
-  navigate() {
-    this.cacheService.set(
-      this.cacheService.constants.CHARACTER,
-      this.character
-    );
-    this.router.navigate([String('/search/character/1')]);
+  onClick() {
+    this.clickCard.emit(this.character);
   }
 }

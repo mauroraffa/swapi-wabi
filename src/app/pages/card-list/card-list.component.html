@@ -1,0 +1,48 @@
+<div>
+  <div class="search">
+    <div class="headboard">
+      <wb-headboard
+        [title]="'Characters'"
+        [subtitle]="'Star Wars character finder'"
+      >
+      </wb-headboard>
+    </div>
+
+    <div class="search">
+      <wb-search-text
+        [errorMessage]="people.length === 0"
+        (searchEvent)="searchPeople($event)"
+      >
+      </wb-search-text>
+    </div>
+
+    <div class="featured-container" *ngIf="!loadingPage">
+      <div class="featured-items">
+        <div class="featured" *ngFor="let character of people">
+          <wb-card
+            [character]="character"
+            (clickCard)="clickCard($event)"
+          ></wb-card>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-container" *ngIf="loadingPage">
+      <div class="featured-items">
+        <div class="featured" *ngFor="let item of loadingItems">
+          <wb-card [loading]="true"></wb-card>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="people.length > 0">
+      <wb-paginator
+        [totalPages]="totalPages"
+        [page]="nroPage"
+        (pageSelectedEvent)="pageSelectedEvent($event)"
+      >
+      </wb-paginator>
+    </div>
+  </div>
+   
+</div>

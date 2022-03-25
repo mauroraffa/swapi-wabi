@@ -6,7 +6,10 @@ import { FormsModule } from '@angular/forms';
 import { CardComponent } from './card/card.component';
 import { CardCharacterComponent } from './cardCharacter/cardCharacter.component';
 import { FilmComponent } from './film/film.component';
+import { HeadboardComponent } from './headboard/headboard.component';
 import { HeaderComponent } from './header/header.component';
+import { PaginatorComponent } from './paginator/paginator.component';
+import { SearchTextComponent } from './search/search-text.component';
 import { YodaComponent } from './yoda/yoda.component';
 
 @NgModule({
@@ -17,6 +20,9 @@ import { YodaComponent } from './yoda/yoda.component';
     FilmComponent,
     HeaderComponent,
     YodaComponent,
+    SearchTextComponent,
+    HeadboardComponent,
+    PaginatorComponent,
   ],
   exports: [
     CardComponent,
@@ -24,6 +30,9 @@ import { YodaComponent } from './yoda/yoda.component';
     FilmComponent,
     HeaderComponent,
     YodaComponent,
+    SearchTextComponent,
+    HeadboardComponent,
+    PaginatorComponent,
   ],
   entryComponents: [
     CardComponent,
@@ -31,6 +40,9 @@ import { YodaComponent } from './yoda/yoda.component';
     FilmComponent,
     HeaderComponent,
     YodaComponent,
+    SearchTextComponent,
+    HeadboardComponent,
+    PaginatorComponent,
   ],
 })
 export class ComponentsModule {}

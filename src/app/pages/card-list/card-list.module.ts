@@ -1,22 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { SearchComponent } from './search.component';
-import { SearchPageRoutingModule } from './search.routing';
+import { CardListComponent } from './card-list.component';
+import { CardListRoutingModule } from './card-list.routing';
 import { ComponentsModule } from '../../components/components.module';
 import { SharedModule } from 'src/app/core/shared/shared.module';
 
 @NgModule({
-  declarations: [
-    SearchComponent
-  ],
+  declarations: [CardListComponent],
   imports: [
     CommonModule,
     FormsModule,
-    SearchPageRoutingModule,
+    CardListRoutingModule,
     SharedModule,
-    ComponentsModule
+    ComponentsModule,
   ],
   providers: [],
 })
-export class SearchModule { }
+export class CardListModule {}

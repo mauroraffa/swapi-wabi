@@ -5,7 +5,9 @@ const commonsRoutes: Routes = [
   {
     path: 'search',
     loadChildren: () =>
-      import('./pages/search/search.module').then((m) => m.SearchModule),
+      import('./pages/card-list/card-list.module').then(
+        (m) => m.CardListModule
+      ),
   },
   {
     path: '',
